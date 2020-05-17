@@ -1,0 +1,25 @@
+ 2.1      select  Price 
+          from orders 
+          where Price >100
+          order by Price desc
+
+
+2.2       select  Customer_Id ,Customers.First_Name ,Customers.Last_Name 
+          from customers  
+          join orders on Customer_Id=Order_Id 
+          where  orders.Price >100
+          order by Price asc 
+
+
+2.3      select distinct Customer_Id  
+          from customers  
+          join orders on Customer_Id 
+          where  Order_Id >3
+          order by Customer_id asc 
+
+
+2.4 select   customers .Address ,customers .First_Name ,customers.Last_Name 
+    from customers  
+    where Address = Address 
+    order by Address 
+    limit 2
